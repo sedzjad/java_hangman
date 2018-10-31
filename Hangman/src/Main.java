@@ -12,7 +12,7 @@ public class Main {
 	static int stage = 13;
 	static Scanner scan = new Scanner(System.in);
 	static List<String> guesslist = new ArrayList<>();
-	
+
 	// This program is created by Joshua van der Poll -
 	// https://github.com/Luseres/java_hangman
 
@@ -50,7 +50,7 @@ public class Main {
 	// https://github.com/Luseres/java_hangman
 
 	public static void chooseLetter() {
-		if(stage == 0) {
+		if (stage == 0) {
 			System.out.println();
 			System.out.println();
 			System.out.println();
@@ -66,13 +66,13 @@ public class Main {
 		} else {
 			String wordline = "";
 			for (String charachter : word) {
-				if(charachter.contains("@")) {
+				if (charachter.contains("@")) {
 					wordline = wordline + charachter.replace("@", "") + " ";
 				} else {
 					wordline = wordline + "_ ";
 				}
 			}
-			if(!wordline.contains("_")) {
+			if (!wordline.contains("_")) {
 				System.out.println();
 				System.out.println();
 				System.out.println();
@@ -90,7 +90,7 @@ public class Main {
 		System.out.println();
 		String wordline = "";
 		for (String charachter : word) {
-			if(charachter.contains("@")) {
+			if (charachter.contains("@")) {
 				wordline = wordline + charachter.replace("@", "") + " ";
 			} else {
 				wordline = wordline + "_ ";
@@ -116,15 +116,15 @@ public class Main {
 					System.out.println();
 					guesslist.add(vraag.toUpperCase());
 					System.out.println("De letter, " + vraag + " is correct!");
-						
+
 					int count = -1;
 					for (String charachter : word) {
 						count = count + 1;
 						charachter = charachter.toUpperCase();
 						vraag = vraag.toUpperCase();
-					    if(charachter.equals("#" + vraag)) {
-					    	word.set(count, "@" + vraag);
-					    }
+						if (charachter.equals("#" + vraag)) {
+							word.set(count, "@" + vraag);
+						}
 					}
 
 					getASCII(stage);
@@ -136,7 +136,7 @@ public class Main {
 					guesslist.add(vraag.toUpperCase());
 					System.out.println("De letter, " + vraag + " is incorrect!");
 					stage = stage - 1;
-					
+
 					getASCII(stage);
 				}
 			}
