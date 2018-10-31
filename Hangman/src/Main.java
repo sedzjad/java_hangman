@@ -17,11 +17,11 @@ public class Main {
 	// https://github.com/Luseres/java_hangman
 
 	static String[] wordlist = { "Kaas", "Melk", "Boter", "Appel", "Wortel", "Nederland", "Duitsland", "Peer",
-			"Aardbij", "Fiets", "Trein", "Vliegtuig", "Fabriek", "Boederij", "Schoolgebouw", "Personeel", "Stage",
-			"Tafels", "Stoelen", "Koeien", "Zeepbakje", "Werken", "Vloer", "Vloerkleed", "Gordijnen", "Ijzer", "Jaszak",
+			"Aardbij", "Fiets", "Trein", "Vliegtuig", "Fabriek", "Boederij", "School gebouw", "Personeel", "Stage",
+			"Tafels", "Stoelen", "Koeien", "Zeep bakje", "Werken", "Vloer", "Vloer kleed", "Gordijnen", "Ijzer", "Jas zak",
 			"Advertentie", "Agenda", "Documenten", "Afbeeldingen", "Presentaties", "Noedels", "Chinees", "Turkije",
 			"Rusland", "Communisme", "Donald", "Obama", "Despacito", "Baby Shark", "Lennards Laptop", "School boeken",
-			"Oplaad Kabel", "Kapper", "NS Trein", "Dubai City", "White Board", "OV Kaart" };
+			"Oplaad Kabel", "Kapper", "NS Trein", "Dubai", "White Board", "OV Kaart" };
 
 	public static void main(String[] args) {
 		game();
@@ -193,15 +193,14 @@ public class Main {
 							word.set(count, "@" + vraag);
 						}
 					}
+					getASCII(stage);
 					System.out.println();
 					System.out.println("Gebruikte letters:");
+					String used = "";
 					for (String charachter : guesslist) {
-						System.out.println(charachter + ", ");
+						used = used + charachter + ", ";
 					}
-					System.out.println();
-					
-
-					getASCII(stage);
+					System.out.println(used);
 				} else {
 					System.out.println();
 					System.out.println();
@@ -210,8 +209,14 @@ public class Main {
 					guesslist.add(vraag.toUpperCase());
 					System.out.println("De letter, " + vraag + " is incorrect!");
 					stage = stage - 1;
-
 					getASCII(stage);
+					System.out.println();
+					System.out.println("Gebruikte letters:");
+					String used = "";
+					for (String charachter : guesslist) {
+						used = used + charachter + ", ";
+					}
+					System.out.println(used);
 				}
 			}
 		}
