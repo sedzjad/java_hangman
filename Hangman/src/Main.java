@@ -3,6 +3,8 @@ import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
 
+//This program is created by Joshua van der Poll - https://github.com/Luseres/java_hangman
+
 public class Main {
 
 	static String awnser = "";
@@ -39,6 +41,7 @@ public class Main {
 			resetGame();
 		}
 	}
+	//This program is created by Joshua van der Poll - https://github.com/Luseres/java_hangman
 	
 	public static void chooseLetter() {
 		System.out.println();
@@ -205,4 +208,5 @@ public class Main {
 
 	}
 
+	//This program is created by Joshua van der Poll - https://github.com/Luseres/java_hangman
 }
