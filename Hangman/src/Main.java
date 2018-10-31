@@ -12,6 +12,9 @@ public class Main {
 	static int stage = 13;
 	static Scanner scan = new Scanner(System.in);
 	static List<String> guesslist = new ArrayList<>();
+	
+	// This program is created by Joshua van der Poll -
+	// https://github.com/Luseres/java_hangman
 
 	static String[] wordlist = { "Kaas", "Melk", "Boter", "Appel", "Wortel", "Nederland", "Duitsland", "Peer",
 			"Aardbij", "Fiets", "Trein", "Vliegtuig", "Fabriek", "Boederij", "Schoolgebouw", "Personeel", "Stage",
@@ -23,6 +26,8 @@ public class Main {
 	public static void main(String[] args) {
 		game();
 	}
+	// This program is created by Joshua van der Poll -
+	// https://github.com/Luseres/java_hangman
 
 	public static void game() {
 		System.out.println("Wilt u spelen? (ja/nee)");
@@ -139,6 +144,9 @@ public class Main {
 		chooseLetter();
 	}
 
+	// This program is created by Joshua van der Poll -
+	// https://github.com/Luseres/java_hangman
+
 	public static void resetGame() {
 		System.out.println();
 		System.out.println();
@@ -158,6 +166,9 @@ public class Main {
 		game();
 	}
 
+	// This program is created by Joshua van der Poll -
+	// https://github.com/Luseres/java_hangman
+
 	public static void getWord() {
 		word.clear();
 		guesslist.clear();
@@ -167,6 +178,9 @@ public class Main {
 			word.add(("#" + ch).toUpperCase());
 		}
 	}
+
+	// This program is created by Joshua van der Poll -
+	// https://github.com/Luseres/java_hangman
 
 	public static void getASCII(int type) {
 		switch (type) {
