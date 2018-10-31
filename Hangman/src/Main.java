@@ -37,12 +37,31 @@ public class Main {
 			System.out.println("Welkom bij galgje.");
 			System.out.println("U heeft 12 levens om het woord letter voor letter te raden.");
 			System.out.println("Als u dit lukt wint u het spel en anders verliest u.");
+			System.out.println("U kunt \"stop\" typen wanneer u wilt om het spel te stoppen.");
 			System.out.println("============================================================");
 			getWord();
 			System.out.println();
 			chooseLetter();
 		} else {
 			System.out.println("Tot ziens!");
+			System.out.println("Press a key to restart the game.");
+			vraag = scan.nextLine();
+			if(vraag.equalsIgnoreCase("stop")) {
+				System.out.println();
+				System.out.println();
+				System.out.println();
+				System.out.println();
+				System.out.println();
+				System.out.println();
+				System.out.println();
+				System.out.println();
+				System.out.println();
+				System.out.println();
+				System.out.println();
+				System.out.println();
+				System.out.println("Het spel is afgesloten.");
+				return;
+			}
 			resetGame();
 		}
 	}
@@ -61,6 +80,22 @@ public class Main {
 			System.out.println("The word was: " + awnser);
 			System.out.println("Press a key to restart the game.");
 			String vraag = scan.nextLine();
+			if(vraag.equalsIgnoreCase("stop")) {
+				System.out.println();
+				System.out.println();
+				System.out.println();
+				System.out.println();
+				System.out.println();
+				System.out.println();
+				System.out.println();
+				System.out.println();
+				System.out.println();
+				System.out.println();
+				System.out.println();
+				System.out.println();
+				System.out.println("Het spel is afgesloten.");
+				return;
+			}
 			resetGame();
 			return;
 		} else {
@@ -83,6 +118,22 @@ public class Main {
 				System.out.println("The word was: " + awnser);
 				System.out.println("Press a key to restart the game.");
 				String vraag = scan.nextLine();
+				if(vraag.equalsIgnoreCase("stop")) {
+					System.out.println();
+					System.out.println();
+					System.out.println();
+					System.out.println();
+					System.out.println();
+					System.out.println();
+					System.out.println();
+					System.out.println();
+					System.out.println();
+					System.out.println();
+					System.out.println();
+					System.out.println();
+					System.out.println("Het spel is afgesloten.");
+					return;
+				}
 				resetGame();
 			}
 		}
@@ -100,6 +151,22 @@ public class Main {
 		System.out.println();
 		System.out.println("Please enter a letter:");
 		String vraag = scan.nextLine();
+		if(vraag.equalsIgnoreCase("stop")) {
+			System.out.println();
+			System.out.println();
+			System.out.println();
+			System.out.println();
+			System.out.println();
+			System.out.println();
+			System.out.println();
+			System.out.println();
+			System.out.println();
+			System.out.println();
+			System.out.println();
+			System.out.println();
+			System.out.println("Het spel is afgesloten.");
+			return;
+		}
 		if (!vraag.equals("") && !vraag.equals(" ")) {
 			if (vraag.length() > 1) {
 				System.out.println("You are only allowed to use 1 character");
@@ -126,6 +193,13 @@ public class Main {
 							word.set(count, "@" + vraag);
 						}
 					}
+					System.out.println();
+					System.out.println("Gebruikte letters:");
+					for (String charachter : guesslist) {
+						System.out.println(charachter + ", ");
+					}
+					System.out.println();
+					
 
 					getASCII(stage);
 				} else {
